@@ -14,9 +14,9 @@ masyarakat memperoleh makanan yang lebih terjangkau dan mengurangi limbah pangan
 
 ## Halaman
 
-- 'index.html` : halaman informasi SisaBaik.
-- 'daftar-penyedia.html` : formulir pendaftaran penyedia.
-- 'tawarkan-makanan.html' : formulir penawaran makanan berlebih.
+- 'index.html': halaman informasi SisaBaik.
+- 'daftar-penyedia.html': formulir pendaftaran penyedia.
+- 'tawarkan-makanan.html': formulir penawaran makanan berlebih.
 
 ## Menjalankan proyek
 
