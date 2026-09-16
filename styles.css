@@ -261,7 +261,7 @@ a:hover {
 }
 
 .offer-card__visual {
-  min-height: 8rem;
+  min-height: 4rem;
   background: linear-gradient(
     135deg,
     var(--color-primary),
