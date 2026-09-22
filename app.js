@@ -55,7 +55,7 @@ async function siapkanKatalog() {
                 artikel.innerHTML = `
                 <div class="offer-card__visual" aria-hidden="true"></div>
                 <div class="offer-card__content">
-                <span class="badge">${item.label.Kategori}</span>
+                <span class="badge">${item.labelKategori}</span>
                 <h3>${item.nama}</h3>
                 <p class="offer-card__meta">${item.penyedia} • ${item.stok} ${item.satuan}</p>
                 <p class="offer-card__price"><del>${rupiah.format(item.hargaNormal)}</del>
@@ -75,24 +75,24 @@ async function siapkanKatalog() {
                 document.querySelector("#total-pesanan").textContent = rupiah.format(total);
 }
                 function siapkanValidasiPenawaran(){
-                const form = document.querySelector("form-penawaran");
+                const form = document.querySelector("#form-penawaran");
                 if (!form) return;
                 const normal = form.querySelector("#harga-normal");
                 const penawaran = form.querySelector("#harga-pemulihan");
 
                 function validasiHarga() {
                 const hargaNormal = Number(normal.value);
-                const hargaPenawaran = Number(penawaran.calue);
+                const hargaPenawaran = Number(penawaran.value);
                 penawaran.setCustomValidity(
                 hargaPenawaran > hargaNormal ? "Harga penawaran tidak boleh melebihi harga normal." : ""
              );
             }
              normal.addEventListener("input", validasiHarga);
-             penawaran.addEventListener("inpput", validasiHarga);
+             penawaran.addEventListener("input", validasiHarga);
              form.addEventListener("submit", (event) => { 
             validasiHarga();
             if (!form.checkValidity()) { 
-                event.prevenDefault();
+                event.preventDefault();
                 form.reportValidity();
             }
         });
